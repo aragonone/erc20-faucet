@@ -1,0 +1,24 @@
+{
+  "name": "@aragon/erc20-faucet",
+  "version": "1.0.0",
+  "description": "ERC20 token faucet",
+  "author": "Aragon One",
+  "license": "GPL-3.0",
+  "scripts": {
+    "compile": "truffle compile",
+    "lint": "solium --dir ./contracts",
+    "test": "./node_modules/@aragon/test-helpers/ganache-cli.sh",
+    "abi:extract": "truffle-extract --output abi/ --keys abi",
+    "prepublishOnly": "truffle compile --all && npm run abi:extract -- --no-compile"
+  },
+  "devDependencies": {
+    "@aragon/test-helpers": "^2.1.0",
+    "@aragon/truffle-config-v5": "^1.0.0",
+    "ganache-cli": "^6.4.5",
+    "solium": "^1.2.3",
+    "truffle": "^5.0.34",
+    "truffle-extract": "^1.2.1",
+    "web3": "^1.2.1",
+    "web3-eth-abi": "1.0.0-beta.33"
+  }
+}

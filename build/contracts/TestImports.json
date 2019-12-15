@@ -1,0 +1,199 @@
+{
+  "contractName": "TestImports",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/facu/Documents/work/aragon/dev/token-faucet/contracts/test/TestImports.sol\":\"TestImports\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[]},\"sources\":{\"/Users/facu/Documents/work/aragon/dev/token-faucet/contracts/os/Migrations.sol\":{\"keccak256\":\"0xda7bedfc38b4325c69852c1d6dde37d78fed112011b59acf038f2256a2ad7b3b\",\"urls\":[\"bzzr://b95428d90e93072924c84171fb6a32265e278d5f6c04289dfeda7c35aeb6716d\"]},\"/Users/facu/Documents/work/aragon/dev/token-faucet/contracts/test/TestImports.sol\":{\"keccak256\":\"0x2a666a2348e6a5b0be1d88994ac30578a4d3a7efdde8d321891bf08aec3f5093\",\"urls\":[\"bzzr://e2e8ed5dbc7b5db58da09fc1f0ccd239bdd21e9388a2f824c038dbe6e04399be\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a723058205648491c03d95e9cb1a306ff33d80e3827ce95092205c6197fe377ac7d87e01c0029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a723058205648491c03d95e9cb1a306ff33d80e3827ce95092205c6197fe377ac7d87e01c0029",
+  "sourceMap": "58:113:9:-;;;85:84;8:9:-1;5:2;;;30:1;27;20:12;5:2;85:84:9;58:113;;;;;;",
+  "deployedSourceMap": "58:113:9:-;;;;;",
+  "source": "pragma solidity ^0.5.8;\n\nimport \"../os/Migrations.sol\";\n\n\ncontract TestImports {\n    constructor() public {\n        // solium-disable-previous-line no-empty-blocks\n    }\n}\n",
+  "sourcePath": "/Users/facu/Documents/work/aragon/dev/token-faucet/contracts/test/TestImports.sol",
+  "ast": {
+    "absolutePath": "/Users/facu/Documents/work/aragon/dev/token-faucet/contracts/test/TestImports.sol",
+    "exportedSymbols": {
+      "TestImports": [
+        1484
+      ]
+    },
+    "id": 1485,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1478,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:9"
+      },
+      {
+        "absolutePath": "/Users/facu/Documents/work/aragon/dev/token-faucet/contracts/os/Migrations.sol",
+        "file": "../os/Migrations.sol",
+        "id": 1479,
+        "nodeType": "ImportDirective",
+        "scope": 1485,
+        "sourceUnit": 766,
+        "src": "25:30:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1484,
+        "linearizedBaseContracts": [
+          1484
+        ],
+        "name": "TestImports",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1482,
+              "nodeType": "Block",
+              "src": "106:63:9",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 1483,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1480,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "96:2:9"
+            },
+            "returnParameters": {
+              "id": 1481,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "106:0:9"
+            },
+            "scope": 1484,
+            "src": "85:84:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1485,
+        "src": "58:113:9"
+      }
+    ],
+    "src": "0:172:9"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/facu/Documents/work/aragon/dev/token-faucet/contracts/test/TestImports.sol",
+    "exportedSymbols": {
+      "TestImports": [
+        1484
+      ]
+    },
+    "id": 1485,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1478,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".8"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:9"
+      },
+      {
+        "absolutePath": "/Users/facu/Documents/work/aragon/dev/token-faucet/contracts/os/Migrations.sol",
+        "file": "../os/Migrations.sol",
+        "id": 1479,
+        "nodeType": "ImportDirective",
+        "scope": 1485,
+        "sourceUnit": 766,
+        "src": "25:30:9",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1484,
+        "linearizedBaseContracts": [
+          1484
+        ],
+        "name": "TestImports",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1482,
+              "nodeType": "Block",
+              "src": "106:63:9",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 1483,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1480,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "96:2:9"
+            },
+            "returnParameters": {
+              "id": 1481,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "106:0:9"
+            },
+            "scope": 1484,
+            "src": "85:84:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1485,
+        "src": "58:113:9"
+      }
+    ],
+    "src": "0:172:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.19",
+  "updatedAt": "2019-12-15T11:19:27.056Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
