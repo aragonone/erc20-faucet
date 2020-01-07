@@ -1,9 +1,14 @@
 {
-  "name": "@aragon/erc20-faucet",
+  "name": "@aragonone/erc20-faucet",
   "version": "1.0.0",
   "description": "ERC20 token faucet",
   "author": "Aragon One",
   "license": "GPL-3.0",
+  "files": [
+    "/abi",
+    "/build",
+    "/contracts"
+  ],
   "scripts": {
     "compile": "truffle compile",
     "lint": "solium --dir ./contracts",
