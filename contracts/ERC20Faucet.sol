@@ -26,7 +26,7 @@ contract ERC20Faucet is Ownable, TimeHelpers {
     }
 
     struct Withdrawal {
-        uint256 lastPeriodId;
+        mapping (address => uint256) lastPeriodId;
         mapping (address => uint256) lastPeriodAmount;
     }
 
@@ -79,7 +79,7 @@ contract ERC20Faucet is Ownable, TimeHelpers {
 
         // If the last period is in the future, something went wrong somewhere
         Withdrawal storage withdrawal = withdrawals[msg.sender];
-        uint256 lastPeriodId = withdrawal.lastPeriodId;
+        uint256 lastPeriodId = withdrawal.lastPeriodId[tokenAddress];
         Quota storage quota = tokenQuotas[tokenAddress];
         uint256 currentPeriodId = _getCurrentPeriodId(quota);
         require(lastPeriodId <= currentPeriodId, ERROR_FUTURE_LAST_PERIOD);
@@ -92,7 +92,7 @@ contract ERC20Faucet is Ownable, TimeHelpers {
         // Update withdrawal and transfer tokens
         uint256 newTotalSupply = totalSupply.sub(_amount);
         supplyByToken[tokenAddress] = newTotalSupply;
-        withdrawal.lastPeriodId = currentPeriodId;
+        withdrawal.lastPeriodId[tokenAddress] = currentPeriodId;
         withdrawal.lastPeriodAmount[tokenAddress] = newPeriodAmount;
 
         // Transfer tokens
@@ -148,7 +148,7 @@ contract ERC20Faucet is Ownable, TimeHelpers {
     function getWithdrawal(address _account, ERC20 _token) external view returns (uint256 id, uint256 amount) {
         Withdrawal storage withdrawal = withdrawals[_account];
         uint256 lastPeriodAmount = withdrawal.lastPeriodAmount[address(_token)];
-        return (withdrawal.lastPeriodId, lastPeriodAmount);
+        return (withdrawal.lastPeriodId[address(_token)], lastPeriodAmount);
     }
 
     /**
